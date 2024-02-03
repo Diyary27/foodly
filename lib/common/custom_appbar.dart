@@ -11,15 +11,16 @@ class CustomAppBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: width,
-      height: 110.h,
+      height: 90.h,
       padding: EdgeInsets.symmetric(horizontal: 12.w, vertical: 6.h),
-      margin: EdgeInsets.only(top: 20.h),
+      margin: EdgeInsets.only(top: 33.h),
       color: kOffWhite,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        crossAxisAlignment: CrossAxisAlignment.end,
         children: [
           CircleAvatar(
-            radius: 25.r,
+            radius: 30.r,
             backgroundColor: kSecondary,
             backgroundImage: NetworkImage(
                 "https://www.profilebakery.com/wp-content/uploads/2023/03/AI-Profile-Picture.jpg"),
@@ -39,7 +40,7 @@ class CustomAppBar extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                  width: width * 0.65,
+                  width: width * 0.60,
                   child: Text(
                     "14867 21st Street Ave N, Plymouth, MN 554789",
                     overflow: TextOverflow.ellipsis,
@@ -50,12 +51,12 @@ class CustomAppBar extends StatelessWidget {
                     ),
                   ),
                 ),
-                Text(
-                  "*",
-                  style: TextStyle(),
-                ),
               ],
             ),
+          ),
+          Text(
+            "❄️",
+            style: TextStyle(fontSize: 35),
           ),
         ],
       ),
