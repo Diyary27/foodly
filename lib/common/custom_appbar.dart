@@ -55,11 +55,22 @@ class CustomAppBar extends StatelessWidget {
             ),
           ),
           Text(
-            "❄️",
+            getDayTime(),
             style: TextStyle(fontSize: 35),
           ),
         ],
       ),
     );
+  }
+}
+
+String getDayTime() {
+  DateTime now = DateTime.now();
+  if (now.hour > 0 && now.hour < 12) {
+    return "☀️";
+  } else if (now.hour >= 12 && now.hour < 17) {
+    return "⛅";
+  } else {
+    return "🌙";
   }
 }
